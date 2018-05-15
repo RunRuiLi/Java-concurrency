@@ -85,7 +85,7 @@ java编译器会在生成指令系列时在适当的位置会插入内存屏障�
 
 1. 在每个volatile写操作的**前面**插入一个StoreStore屏障；
 2. 在每个volatile写操作的**后面**插入一个StoreLoad屏障；
-3. 在每个volatile读操作的**前面**插入一个LoadLoad屏障；
+3. 在每个volatile读操作的**后面**插入一个LoadLoad屏障；
 4. 在每个volatile读操作的**后面**插入一个LoadStore屏障。
 
 需要注意的是：volatile写是在前面和后面**分别插入内存屏障**，而volatile读操作是在**后面插入两个内存屏障**
